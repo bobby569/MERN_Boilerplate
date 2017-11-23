@@ -2,9 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const parser = require('body-parser');
 const keys = require('./config/keys');
-require('./models/Record');
+require('./models/User');
 
-mongoose.connect(keys.mongoURI, { useMongoClient: true });
+// mongoose.connect(keys.mongoURI, { useMongoClient: true });
 
 const app = express();
 
