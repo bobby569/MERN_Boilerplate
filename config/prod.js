@@ -1,4 +1,4 @@
 // prod.js
 module.exports = {
-	key: ''
+	mongoURI: process.env.MONGO_URI
 };
