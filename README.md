@@ -26,7 +26,13 @@ Following steps to install the dependencies. It will install the required packag
 both frontend and backend.
 
 ```
-$ cd MERN_Boilerplate && npm run pre-install
+$ cd MERN_Boilerplate
+```
+
+then run
+
+```
+npm run pre-install
 ```
 
 ### Start the server
@@ -36,3 +42,7 @@ Run the follow command to start the server.
 ```
 $ npm run dev
 ```
+
+The frontend runs on [http://localhost:3000](http://localhost:3000) and the backend runs
+on [http://localhost:8080](http://localhost:8080). The frontend and backend are
+connected using proxy. Try to visit [here](http://localhost:3000/test) for the effect.

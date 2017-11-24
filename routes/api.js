@@ -1,7 +1,7 @@
 const requireSomething = require('../middlewares/requireSomething');
 
 module.exports = app => {
-	app.get('/', requireSomething, (req, res) => {
+	app.get('/test', requireSomething, (req, res) => {
 		res.send('Hello world');
 	});
 };
