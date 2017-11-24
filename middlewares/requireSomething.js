@@ -1,5 +1,5 @@
 module.exports = (req, res, next) => {
-	// condition here
+	// condition goes here
 
 	next();
 };
