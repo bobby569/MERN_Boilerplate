@@ -4,6 +4,10 @@ const parser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/User');
 
+/*
+	Comment the line below out after
+	fill the mongoURI in ./config/dev.js
+ */
 // mongoose.connect(keys.mongoURI, { useMongoClient: true });
 
 const app = express();
