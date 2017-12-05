@@ -1,38 +1,36 @@
+This is a Boilerplate for MERN (Mongo, Express, React, Node.js) Stack web development.
+Redux is added to better centralize the data in the _store_ for the project.
+
 ## Usage
 
-The Boilerplate is for MERN (Mongo, Express, React, Node.js) Stack development. It also
-adds Redux to have better control of the project.
+### Environment Prerequisite
 
-### Prerequisite
+#### node and npm
 
-Make sure to have up-to-date npm. Run the following command to install
-[nodemon](https://www.npmjs.com/package/nodemon) globally.
+You could download them [here](https://nodejs.org/en/).
+
+Run `$ node --version` and `$ npm --version` to check if installed successfully.
+
+#### nodemon
+
+Run the following command to install [nodemon](https://www.npmjs.com/package/nodemon)
+globally. nodemon is a helpful tool for node.js development. It will watch the directory
+in which nodemon was started and automatically restart the application if files change.
 
 ```
 $ npm install -g nodemon
 ```
 
-### Clone to your local
+### Clone and install dependencies
 
-Clone the repo using git by running the command below.
+Clone the repo using git by running the command below. Change to the directory and then
+install the dependencies used for the boilerplate. The last command will install the
+packages for both frontend and backend.
 
 ```
 $ git clone https://github.com/bobby569/MERN_Boilerplate.git
-```
-
-### Install dependencies
-
-Following steps to install the dependencies. It will install the required packages for
-both frontend and backend.
-
-```
 $ cd MERN_Boilerplate
-```
-
-then run
-
-```
-npm run pre-install
+$ npm run pre-install
 ```
 
 ### Start the server
@@ -43,6 +41,7 @@ Run the follow command to start the server.
 $ npm run dev
 ```
 
-The frontend runs on [http://localhost:3000](http://localhost:3000) and the backend runs
-on [http://localhost:8080](http://localhost:8080). The frontend and backend are
-connected using proxy. Try to visit [here](http://localhost:3000/test) for the effect.
+### Deploy to heroku
+
+TBD
+

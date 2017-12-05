@@ -5,9 +5,10 @@ const keys = require('./config/keys');
 require('./models/User');
 
 /*
-	Comment out the line below to connect to the database
+	Resume the line of mongoose below to connect to the database
 	after fill out the mongoURI in ./config/dev.js
  */
+
 // mongoose.connect(keys.mongoURI, { useMongoClient: true });
 
 const app = express();
