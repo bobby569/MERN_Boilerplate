@@ -1,35 +1,27 @@
-This is a Boilerplate for MERN (Mongo, Express, React, Node.js) Stack web development.
-Redux is added to better centralize the data in the _store_ for the project.
+# MERN Stack Development Boilerplate
+
+MERN Boilerplate is a template for web development using Mongo, Express, React, Node.js
+Stack. Simple template for Redux is also added to better centralize the data in the
+_store_ for the project. Feel free to take the advantage of it.
+
+The template is based on a survey application, the idea of which is introduced by
+Stephen Grider.
 
 ## Usage
 
-### Environment Prerequisite
+### node and npm
 
-#### node and npm
+This template has been tested on Node.js 8.9 and npm 5.5. The packages should be
+available for download [here](https://nodejs.org/en/).
 
-You could download them [here](https://nodejs.org/en/).
+Run `$ node -v` and `$ npm -v` to check if installed successfully.
 
-Run `$ node --version` and `$ npm --version` to check if installed successfully.
+### Install dependencies
 
-#### nodemon
-
-Run the following command to install [nodemon](https://www.npmjs.com/package/nodemon)
-globally. nodemon is a helpful tool for node.js development. It will watch the directory
-in which nodemon was started and automatically restart the application if files change.
+Clone the repo to your local and install the dependencies used for the boilerplate using
+the command below. It will download the packages for both frontend and backend.
 
 ```
-$ npm install -g nodemon
-```
-
-### Clone and install dependencies
-
-Clone the repo using git by running the command below. Change to the directory and then
-install the dependencies used for the boilerplate. The last command will install the
-packages for both frontend and backend.
-
-```
-$ git clone https://github.com/bobby569/MERN_Boilerplate.git
-$ cd MERN_Boilerplate
 $ npm run pre-install
 ```
 
@@ -45,3 +37,6 @@ $ npm run dev
 
 TBD
 
+## License
+
+MIT
