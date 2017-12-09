@@ -1,9 +1,12 @@
+const cookieSession = require('cookie-session');
 const express = require('express');
 const mongoose = require('mongoose');
 const parser = require('body-parser');
 const passport = require('passport');
+const path = require('path');
 const keys = require('./config/keys');
-require('./models/User');
+require('./app/models/User');
+require('./app/services/passport');
 
 /*
 	Resume the line of mongoose below to connect to the database
@@ -14,21 +17,30 @@ require('./models/User');
 
 const app = express();
 
+app.use(
+	cookieSession({
+		maxAge: 24 * 60 * 60 * 1000, // in microsecond
+		keys: [keys.cookieKey]
+	})
+);
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(parser.json());
-app.use(parser.urlencoded({ extended: true }));
+app.use(parser.urlencoded({ extended: false }));
 
-require('./routes/api')(app);
+require('./app/routes/api')(app);
 
 if (process.env.NODE_ENV == 'production') {
 	app.use(express.static('client/build'));
-
-	const path = require('path');
 	app.get('*', (req, res) => {
 		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 	});
 }
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT);
+app.listen(PORT, err => {
+	if (err) {
+		throw err;
+	}
+	console.log(`Server is listening on ${PORT}`);
+});
