@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const parser = require('body-parser');
+const passport = require('passport');
 const keys = require('./config/keys');
 require('./models/User');
 
@@ -13,6 +14,8 @@ require('./models/User');
 
 const app = express();
 
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 
