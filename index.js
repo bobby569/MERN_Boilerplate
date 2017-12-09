@@ -1,9 +1,9 @@
-const cookieSession = require('cookie-session');
 const express = require('express');
 const mongoose = require('mongoose');
 const parser = require('body-parser');
 const passport = require('passport');
 const path = require('path');
+const session = require('cookie-session');
 const keys = require('./config/keys');
 require('./app/models/User');
 require('./app/services/passport');
@@ -18,8 +18,8 @@ require('./app/services/passport');
 const app = express();
 
 app.use(
-	cookieSession({
-		maxAge: 24 * 60 * 60 * 1000, // in microsecond
+	session({
+		maxAge: 24 * 60 * 60 * 1000, // in microseconds
 		keys: [keys.cookieKey]
 	})
 );
@@ -42,5 +42,5 @@ app.listen(PORT, err => {
 	if (err) {
 		throw err;
 	}
-	console.log(`Server is listening on ${PORT}`);
+	console.log(`Server is listening on http://localhost:3000/`);
 });

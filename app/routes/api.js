@@ -1,13 +1,16 @@
+const passport = require('passport');
 const requireLogin = require('../middlewares/requireLogin');
 
 module.exports = app => {
-	app.get('/profile', requireLogin, (req, res) => {
+	app.get('/user', requireLogin, (req, res) => {
 		res.send('Login successfully!');
 	});
 
-	app.post('/api/login', (req, res) => {});
+	app.post('/login', passport.authenticate('local'), (req, res) => {
+		res.redirect(`/user/${req.user.username}`);
+	});
 
-	app.post('/api/logout', (req, res) => {
+	app.post('/logout', (req, res) => {
 		req.logout();
 		res.redirect('/');
 	});

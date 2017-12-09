@@ -2,10 +2,11 @@
 
 MERN Boilerplate is a template for web development using Mongo, Express, React, Node.js
 Stack. Simple template for Redux is also added to better centralize the data in the
-_store_ for the project. Feel free to take the advantage of it.
+_store_ for the project. Feel free to take the advantage of it and modify the code based
+on your personal need.
 
-The template is based on a survey application, the idea of which is introduced by
-Stephen Grider.
+Part of the template is based on a survey application, the idea of which is introduced
+by Stephen Grider.
 
 ## Usage
 
@@ -33,9 +34,26 @@ Run the follow command to start the server.
 $ npm run dev
 ```
 
-### Deploy to heroku
+## Deploy to heroku
 
-TBD
+### Create Project under Heroku Personal Account
+
+Login with the heroku credential using `$ heroku login` and do commit the project, run
+the following command to publish to heroku server.
+
+```
+$ heroku create
+$ git push heroku master
+```
+
+### Production Environment Setup
+
+TBA
+
+## Found any issue with the template?
+
+Please submit the issue [here](https://github.com/bobby569/MERN_Boilerplate/issues). I
+am looking forward to any feedback!
 
 ## License
 
