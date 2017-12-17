@@ -1,59 +1,56 @@
-# MERN Stack Development Boilerplate
+# MERN Stack Dev Starter
 
-MERN Boilerplate is a template for web development using Mongo, Express, React, Node.js
-Stack. Simple template for Redux is also added to better centralize the data in the
-_store_ for the project. Feel free to take the advantage of it and modify the code based
-on your personal need.
-
-Part of the template is based on a survey application, the idea of which is introduced
-by Stephen Grider.
+This starter is beginner-friendly with MongoDB, Express, React, and Node.js for Full Stack development. Each part comes with sample code for reference. A Redux template is added for better centralizing the data in the _Redux store_. Feel free to take the advantage of it and modify the code based on individual need.
 
 ## Usage
 
-### node and npm
+Assume [node](https://nodejs.org/en/) has already been installed. Either [npm](https://nodejs.org/en/) or [yarn](https://yarnpkg.com/en/) works.
 
-This template has been tested on Node.js 8.9 and npm 5.5. The packages should be
-available for download [here](https://nodejs.org/en/).
-
-Run `$ node -v` and `$ npm -v` to check if installed successfully.
-
-### Install dependencies
-
-Clone the repo to your local and install the dependencies used for the boilerplate using
-the command below. It will download the packages for both frontend and backend.
+### Clone the repo
 
 ```
-$ npm run pre-install
+$ git clone git@github.com:bobby569/MERN_Starter.git
+$ cd MERN_Starter
+```
+
+### Setup
+
+```
+$ yarn setup
+$ npm run setup
 ```
 
 ### Start the server
 
-Run the follow command to start the server.
-
 ```
+$ yarn dev
 $ npm run dev
 ```
 
 ## Deploy to heroku
 
-### Create Project under Heroku Personal Account
-
-Login with the heroku credential using `$ heroku login` and do commit the project, run
-the following command to publish to heroku server.
+### Login into heroku and add heroku to create local project
 
 ```
+$ heroku login
 $ heroku create
+```
+
+### Push to heroku server
+
+After committing any changes, run
+
+```
 $ git push heroku master
 ```
 
 ### Production Environment Setup
 
-TBA
+TODO
 
 ## Found any issue with the template?
 
-Please submit the issue [here](https://github.com/bobby569/MERN_Boilerplate/issues). I
-am looking forward to any feedback!
+If you encounter any issue, please submit the issue [here](https://github.com/bobby569/MERN_Boilerplate/issues).I am looking forward to any feedback!
 
 ## License
 
